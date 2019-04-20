@@ -1,0 +1,33 @@
+<div class="content">
+  <form [formGroup]="coordinatesForm" (ngSubmit)="calculate()" novalidate>
+    <div class="form-group">
+      <label>Latitude From (*)</label>
+      <input type="text" name="latitudeFrom" formControlName="latitudeFrom" required />
+    </div>
+    <div class="form-group">
+      <label>Longitude From (*)</label>
+      <input type="text" name="longitudeFrom" formControlName="longitudeFrom" required />
+    </div>
+    <div class="form-group">
+      <label>Latitude To (*)</label>
+      <input type="text" name="latitudeTo" formControlName="latitudeTo" required />
+    </div>
+    <div class="form-group">
+      <label>Longitude To (*)</label>
+      <input type="text" name="longitudeTo" formControlName="longitudeTo" required />
+    </div>
+    <div class="form-group">
+      <button type="submit">{{ loading ? 'Calculating...' : 'Calculate Distance' }}</button>
+      <div *ngIf="coordinatesForm.invalid && validate">
+        <label class="error">All fields are required and must be a valid coordinate number</label>
+      </div>
+    </div>
+  </form>
+  <div *ngIf="errorMessage || calculationResponse">
+    <hr />
+    <div>
+      <label class="error" *ngIf="errorMessage">{{ errorMessage }}</label>
+      <label class="success" *ngIf="calculationResponse">{{ calculationResponse }}</label>
+    </div>
+  </div>
+</div>

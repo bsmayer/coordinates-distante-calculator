@@ -1,0 +1,77 @@
+.content {
+  width: 500px;
+  margin-top: 20px;
+  padding: 10px;
+  margin: auto;
+  border: 1px solid #CCC;
+  border-radius: 10px;
+}
+
+.form-group {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.form-group label {
+  font-family: Verdana;
+  font-size: 12px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group button {
+  height: 40px;
+  background-color: #3f8ae5;
+  color: #FFF;
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-size: 12px;
+  font-family: Verdana;
+  border: 0;
+  width: 100%;
+  cursor: pointer;
+  outline: 0;
+}
+
+.form-group button[disabled] {
+  background-color: #a3cdff;
+  cursor: auto;
+  outline: 0;
+}
+
+.form-group input {
+  width: 97%;
+  height: 30px;
+  display: block;
+  font-size: 13px;
+  padding-left: 1%;
+  padding-right: 1%;
+  border-top: 1px solid #666;
+  border-right: 1px solid #666;
+  border-bottom: 1px solid #666;
+  outline: 0;
+}
+
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form) {
+  border-left: 5px solid #a94442; /* red */
+}
+
+label.error {
+  font-family: Verdana;
+  font-size: 13px;
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}
+
+label.success {
+  font-family: Verdana;
+  font-size: 13px;
+  color: #42A948;
+  text-align: center;
+  margin-top: 10px;
+}
